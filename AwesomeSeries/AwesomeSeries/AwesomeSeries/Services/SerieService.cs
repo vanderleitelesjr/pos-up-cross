@@ -2,15 +2,24 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using AwesomeSeries.Infra;
+using AwesomeSeries.Infra.Api;
 using AwesomeSeries.Models;
 
 namespace AwesomeSeries.Services
 {
     public class SerieService : ISerieService
     {
-        public Task<SerieResponse> GetSeriesAsync()
+        readonly ITmdbApi _api;
+        
+        public SerieService(ITmdbApi api)
         {
-            throw new NotImplementedException();
+            _api = api;
+        }
+
+        public async Task<SerieResponse> GetSeriesAsync()
+        {
+           return await _api.GetSerieResponseAsync(AppSettings.ApiKey);
         }
     }
 }

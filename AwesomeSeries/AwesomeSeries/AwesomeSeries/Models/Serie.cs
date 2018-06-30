@@ -28,5 +28,14 @@ namespace AwesomeSeries.Models
 
         [JsonProperty("poster_path")]
         public string PosterPath { get; set; }
+
+        [JsonIgnore]
+        public string ReleaseDate
+        {
+            get
+            {
+                return $"{FirstAirDate:dd/MM/yy}";
+            }
+        }
     }
 }
