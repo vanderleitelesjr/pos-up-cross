@@ -1,4 +1,5 @@
 ﻿using System;
+using AwesomeSeries.Infra;
 using Newtonsoft.Json;
 
 namespace AwesomeSeries.Models
@@ -28,6 +29,18 @@ namespace AwesomeSeries.Models
 
         [JsonProperty("poster_path")]
         public string PosterPath { get; set; }
+
+        [JsonIgnore]
+        public string Poster
+        {
+            get { return $"{AppSettings.ApiImageBaseUrl}{PosterPath}"; }
+        }
+
+        [JsonIgnore]
+        public string Backdrop
+        {
+            get { return $"{AppSettings.ApiImageBaseUrl}{BackdropPath}"; }
+        }
 
         [JsonIgnore]
         public string ReleaseDate
