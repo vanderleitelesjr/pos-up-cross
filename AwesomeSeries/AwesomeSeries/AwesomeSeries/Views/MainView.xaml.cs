@@ -15,6 +15,8 @@ namespace AwesomeSeries.Views
 		public MainView ()
 		{
 			InitializeComponent ();
+
+           
 		}
 	}
 }
