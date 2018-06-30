@@ -9,6 +9,7 @@ namespace AwesomeSeries.ViewModel
     {
         public MainViewModel() : base("Awesome Series")
         {
+            
         }
     }
 }

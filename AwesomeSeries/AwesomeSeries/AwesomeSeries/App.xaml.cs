@@ -1,3 +1,5 @@
+using AwesomeSeries.Services;
+using AwesomeSeries.ViewModel.Base;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,9 +12,24 @@ namespace AwesomeSeries
 		public App ()
 		{
 			InitializeComponent();
+
+            BuildDependencies();
+
+            InitNavigation();
 		}
 
-		protected override void OnStart ()
+        async void InitNavigation()
+        {
+            var navigationService = ViewModelLocator.Instance.Resolve<INavigationService>();
+            await navigationService.Initialize();
+        }
+
+        void BuildDependencies()
+        {
+            ViewModelLocator.Instance.Build();
+        }
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

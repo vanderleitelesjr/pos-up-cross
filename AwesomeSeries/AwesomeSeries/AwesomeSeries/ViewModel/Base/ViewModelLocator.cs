@@ -22,6 +22,10 @@ namespace AwesomeSeries.ViewModel.Base
             _containerBuilder = new ContainerBuilder();
 
             _containerBuilder.RegisterType<NavigationService>().As<INavigationService>();
+
+            _containerBuilder.RegisterType<MainViewModel>();
+            _containerBuilder.RegisterType<DetailViewModel>();
+
         }
 
         public T Resolve<T>()

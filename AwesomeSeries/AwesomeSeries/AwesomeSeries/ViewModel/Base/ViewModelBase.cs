@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AwesomeSeries.Services;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace AwesomeSeries.ViewModel.Base
 {
     public abstract class ViewModelBase : BindableObject
     {
+        protected readonly INavigationService NavigationService;
+
         string _title;
         public string Title
         {
@@ -18,6 +21,7 @@ namespace AwesomeSeries.ViewModel.Base
         public ViewModelBase(string title)
         {
             Title = title;
+            NavigationService = ViewModelLocator.Instance.Resolve<INavigationService>();
         }
 
         public virtual Task InitializeAsync(object navgationData)
