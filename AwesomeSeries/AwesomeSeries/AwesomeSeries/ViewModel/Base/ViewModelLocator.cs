@@ -22,6 +22,7 @@ namespace AwesomeSeries.ViewModel.Base
             _containerBuilder = new ContainerBuilder();
 
             _containerBuilder.RegisterType<NavigationService>().As<INavigationService>();
+            _containerBuilder.RegisterType<SerieService>().As<ISerieService>();
 
             _containerBuilder.RegisterType<MainViewModel>();
             _containerBuilder.RegisterType<DetailViewModel>();

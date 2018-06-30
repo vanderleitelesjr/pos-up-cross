@@ -8,7 +8,7 @@ namespace AwesomeSeries.Services
 {
     public class SerieService : ISerieService
     {
-        public Task<IEnumerable<SerieResponse>> GetSeriesAsync()
+        public Task<SerieResponse> GetSeriesAsync()
         {
             throw new NotImplementedException();
         }

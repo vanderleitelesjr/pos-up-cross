@@ -8,6 +8,6 @@ namespace AwesomeSeries.Services
 {
     public interface ISerieService
     {
-        Task<IEnumerable<SerieResponse>> GetSeriesAsync();
+        Task<SerieResponse> GetSeriesAsync();
     }
 }
