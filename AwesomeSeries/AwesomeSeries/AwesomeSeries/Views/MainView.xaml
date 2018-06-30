@@ -9,7 +9,8 @@
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand"
             HasUnevenRows="True"
-            SeparatorColor="DimGray"
+            SeparatorColor="Red"
+            BackgroundColor="Black"
             CachingStrategy="RecycleElement"
             ItemsSource="{Binding Items}"
             behaviors:AttachedItemTappedBehavior.Command="{Binding ItemClickCommand}"
@@ -26,8 +27,8 @@
                                    HorizontalOptions="Start" 
                                    HeightRequest="120" />
                             <StackLayout>
-                                <Label Text="{Binding Name}" FontSize="Medium" />
-                                <Label Text="{Binding OriginalName}" FontSize="Small" />
+                                <Label Text="{Binding Name}" FontSize="Medium" TextColor="White"/>
+                                <Label Text="{Binding ReleaseDate}" FontSize="Small" TextColor="White"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

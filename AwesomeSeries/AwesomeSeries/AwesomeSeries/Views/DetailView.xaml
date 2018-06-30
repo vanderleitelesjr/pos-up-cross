@@ -4,10 +4,8 @@
              Title="{Binding Title}"
              x:Class="AwesomeSeries.Views.DetailView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
