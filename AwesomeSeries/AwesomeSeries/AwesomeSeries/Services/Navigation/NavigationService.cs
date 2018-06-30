@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace AwesomeSeries.Services
 {
-    public class Navigation : INavigationService
+    public class NavigationService : INavigationService
     {
         protected readonly Dictionary<Type, Type> _mappings;
 
@@ -20,7 +20,7 @@ namespace AwesomeSeries.Services
             get { return Application.Current; }
         }
 
-        public Navigation()
+        public NavigationService()
         {
             _mappings = new Dictionary<Type, Type>();
             CreateViewModelMappings();
