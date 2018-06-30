@@ -4,8 +4,20 @@
              Title="{Binding Title}"
              x:Class="AwesomeSeries.Views.DetailView">
     <ContentPage.Content>
-        <Grid>
-            
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="0"
+            BackgroundColor="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="{Binding Name}" TextColor="White" FontSize="Large" Grid.Column="1" Grid.Row="0"/>
+            <Image Source="{Binding Backdrop}" Grid.Column="0" Grid.Row="0"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
