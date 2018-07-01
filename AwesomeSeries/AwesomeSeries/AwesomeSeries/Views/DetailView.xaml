@@ -25,7 +25,7 @@
                 <!--Popularity--><RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Image Source="{Binding Backdrop}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
+            <Image Source="{Binding Backdrop}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Fill" Aspect="AspectFill"/>
             <Label Text="{Binding Name}" TextColor="White" FontSize="Large" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" HorizontalTextAlignment="Center"/>
             <BoxView Color="Red" HeightRequest="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3"/>
             <Label Text="Release" TextColor="Red" FontSize="Small" Grid.Column="0" Grid.Row="5"/>
