@@ -22,18 +22,20 @@
                 <!--Release--><RowDefinition Height="20"/>
                 <!--Release--><RowDefinition Height="20"/>
                 <!--Popularity--><RowDefinition Height="20"/>
-                <!--Popularity--><RowDefinition Height="Auto"/>
+                <!--Popularity--><RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Image Source="{Binding Backdrop}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Fill" Aspect="AspectFill"/>
+            <Image Source="{Binding Backdrop}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
             <Label Text="{Binding Name}" TextColor="White" FontSize="Large" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" HorizontalTextAlignment="Center"/>
             <BoxView Color="Red" HeightRequest="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3"/>
-            <Label Text="Release" TextColor="Red" FontSize="Small" Grid.Column="0" Grid.Row="5"/>
+            <Label Text="Release" TextColor="Red" FontSize="Small" Grid.Column="0" Grid.Row="5" HorizontalTextAlignment="Center"/>
             <Label Text="{Binding ReleaseDate}" TextColor="White" FontSize="Small" Grid.Column="0" Grid.Row="6"/>
-            <Label Text="Popularity" TextColor="Red" FontSize="Small" Grid.Column="0" Grid.Row="7"/>
+            <Label Text="Popularity" TextColor="Red" FontSize="Small" Grid.Column="0" Grid.Row="7" HorizontalTextAlignment="Center"/>
             <Label Text="{Binding Votes}" TextColor="White" FontSize="Small" Grid.Column="0" Grid.Row="8" HorizontalOptions="Center"/>
-            <Label Text="{Binding Overview}" TextColor="White" FontSize="Medium" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" Grid.RowSpan="4" LineBreakMode="WordWrap"/>
-
+            <ScrollView Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" Grid.RowSpan="4">
+                <Label Text="{Binding Overview}" TextColor="White" FontSize="Medium" LineBreakMode="WordWrap"/>
+            </ScrollView>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>
