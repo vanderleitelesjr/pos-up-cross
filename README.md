@@ -1,4 +1,5 @@
 # Awesome Series
+List, search and know more about the current best voted Series according to The Movie Db
 
 ## Libraries
 
